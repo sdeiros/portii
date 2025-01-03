@@ -36,16 +36,27 @@
             </div>
 
             <section class="cover">
-                <img src="assets/poster-gil.webp" alt="Projeto 1" class="visible-outro">
-                <img src="assets/poster-tom.webp" alt="Projeto 2" class="visible-outro">
+                <img src="assets/gilberto-gil.webp" alt="Projeto 1" class="visible-outro">
+                <img src="assets/apocalipse.webp" alt="Projeto 2" class="visible-outro">
             </section>
 
         </main>
 
         <section class="works">
-            <img src="assets/poster-gil.webp" alt="Projeto 1">
-            <img src="assets/poster-tom.webp" alt="Projeto 2">
+            <div class="work-item">
+                <img src="assets/tom.webp" alt="Projeto 1">
+                <div class="overlay">
+                    <h1>Tom Filho</h1>
+                    <h2>2024</h2>
+                    <p>Designer Gráfico</p>
+                </div>
+            </div>
+            <div class="work-item">
+                
+            </div>
         </section>
+        
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
@@ -55,7 +66,7 @@
                 el: document.querySelector("[data-scroll-container]"),
                 smooth: true,
                 smoothMobile: true,
-                inertia: 1,
+                inertia: 2.5,
             });
 
             // Adicionando a classe 'hidden' às imagens no carregamento

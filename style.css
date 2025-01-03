@@ -11,7 +11,7 @@ body {
 
 a {
     text-decoration: none;
-    color: inherit; 
+    color: inherit;
 }
 
 a:hover {
@@ -26,11 +26,11 @@ a:hover {
 header.topo {
     display: flex;
     justify-content: space-between;
-    margin-top: 0rem;
+    margin-top: -1rem;
 }
 
 header.topo h1 {
-    font-size: 7rem;
+    font-size: 7.5rem;
     font-weight: 600;
     font-style: normal;
     letter-spacing: -0.2rem;
@@ -40,7 +40,7 @@ header.topo h1 {
 .info {
     display: flex;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0rem;
     gap: 10rem;
     position: relative;
 }
@@ -73,45 +73,109 @@ header.topo h1 {
     font-weight: 600;
 }
 
-section.cover{
+section.cover {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 0rem;
     width: 100%;
-    margin-top: 5rem;
-}
-
-section.cover img {
-    width: calc(50% - 0.5rem); 
-    height: auto; 
-    border-radius: 1rem;
-    animation: fadeInUp; 
-    animation-duration: 1s; 
+    margin-top: 2.5rem;
+    /* Espaçamento superior */
 }
 
 section.works {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 0rem;
     width: 100%;
     margin-top: 1rem;
 }
 
+section.cover img {
+    width: 49vw;
+    aspect-ratio: 5 / 3;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    animation: fadeInUp;
+    animation-duration: 1s;
+}
+
 section.works img {
-    width: calc(50% - 0.5rem); 
-    height: auto; 
-    border-radius: 1rem;
+    width: 49vw;
+    aspect-ratio: 5 / 3;
+    object-fit: cover;
+    border-radius: 0.5rem;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
 }
+
 
 section.works img.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+.work-item {
+    position: relative;
+    width: 49vw;
+    aspect-ratio: 5 / 3;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.work-item:hover img {
+    transform: scale(1.1);
+}
+
+.work-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Somente para Firefox */
+    background-color: rgba(173, 0, 0, 0.13); 
+
+    backdrop-filter: blur(1rem); /* Efeito de desfoque */
+    color: #fff; /* Texto em branco */
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.work-item:hover .overlay {
+    opacity: 1;
+}
+
+
+.work-item .overlay p {
+    margin-top: 30%;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+}
+
+.work-item .overlay h1 {
+    margin-left: 2rem;
+    font-size: 4rem;
+}
+
+.work-item .overlay h2 {
+    margin-left: 2rem;
+    margin-top: -3rem;
+    font-size: 2rem;
+    font-weight: 200;
+}
 
 
