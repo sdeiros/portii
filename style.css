@@ -1,0 +1,117 @@
+body {
+    font-family: "Inter", serif;
+    background-color: #f8f4eb;
+    color: #931f1f;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+[data-scroll-container] {
+    overflow: hidden;
+}
+
+header.topo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0rem;
+}
+
+header.topo h1 {
+    font-size: 7rem;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: -0.2rem;
+    margin: 0;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 10rem;
+    position: relative;
+}
+
+.info p {
+    font-size: 1.2rem;
+}
+
+.info .highlight {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.info .highlight:hover {
+    font-weight: 600;
+}
+
+.papo {
+    position: absolute;
+    right: 0rem;
+    font-size: 1.2rem;
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.papo:hover {
+    font-weight: 600;
+}
+
+section.cover{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+section.cover img {
+    width: calc(50% - 0.5rem); 
+    height: auto; 
+    border-radius: 1rem;
+    animation: fadeInUp; 
+    animation-duration: 1s; 
+}
+
+section.works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+section.works img {
+    width: calc(50% - 0.5rem); 
+    height: auto; 
+    border-radius: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section.works img.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+

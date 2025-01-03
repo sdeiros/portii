@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Portfólio | Davi Medeiros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-scroll-container>
+    <div data-scroll-section>
+        <header class="topo">
+            <h1>Portfólio</h1>
+            <h1>2025</h1>
+        </header>
+
+        <main>
+            <div class="info">
+                <p>Criação Visual<br>Desenvolvimento Web</p>
+                <p>Designer Gráfico<br>Técnico de Informática</p>
+                <p class="highlight">
+                    <a href="sobre.html">Davi Medeiros</a>
+                </p>
+                <p class="papo">
+                    <a href="contato.html">Vamos bater um papo</a>
+                </p>
+            </div>
+
+            <section class="cover">
+                <img src="assets/poster-gil.webp" alt="Projeto 1" class="visible-outro">
+                <img src="assets/poster-tom.webp" alt="Projeto 2" class="visible-outro">
+            </section>
+
+        </main>
+
+        <section class="works">
+            <img src="assets/poster-gil.webp" alt="Projeto 1">
+            <img src="assets/poster-tom.webp" alt="Projeto 2">
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const scroll = new LocomotiveScroll({
+                el: document.querySelector("[data-scroll-container]"),
+                smooth: true,
+                smoothMobile: true,
+                inertia: 1,
+            });
+
+            // Adicionando a classe 'hidden' às imagens no carregamento
+            const images = document.querySelectorAll("section.works img");
+            images.forEach(image => image.classList.add("hidden"));
+
+            // Removendo a classe 'hidden' ao rolar
+            scroll.on("scroll", () => {
+                images.forEach(image => {
+                    if (image.classList.contains("visible") && image.classList.contains("outro") && image.getBoundingClientRect().top < window.innerHeight) {
+                        image.classList.remove("hidden");
+                        image.classList.add("visible-outro");
+                    } else if (image.getBoundingClientRect().top < window.innerHeight) {
+                        image.classList.remove("hidden");
+                        image.classList.add("visible");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
