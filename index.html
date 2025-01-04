@@ -35,28 +35,38 @@
                 </p>
             </div>
 
-            <section class="cover">
-                <img src="assets/gilberto-gil.webp" alt="Projeto 1" class="visible-outro">
-                <img src="assets/apocalipse.webp" alt="Projeto 2" class="visible-outro">
-            </section>
-
         </main>
 
-        <section class="works">
-            <div class="work-item">
-                <img src="assets/tom.webp" alt="Projeto 1">
+        <section class="cover">
+            <div class="cover-item" style="--fallback-color: #931f1f;">
+                <img src="assets/gilberto-gil.webp" alt="Projeto Gilberto Gil">
                 <div class="overlay">
-                    <h1>Tom Filho</h1>
+                    <h1>Premiação Honoris Causa</h1>
                     <h2>2024</h2>
-                    <p>Designer Gráfico</p>
                 </div>
             </div>
-            <div class="work-item">
-                
+        
+            <div class="cover-item" style="--fallback-color: #1f931f;">
+                <img src="assets/apocalipse.webp" alt="Projeto Apocalipse">
+                <div class="overlay">
+                    <h1>Projeto Apocalipse</h1>
+                    <h2>2024</h2>
+                </div>
             </div>
         </section>
         
+        <section class="works">
+            <div class="work-item" style="--fallback-color: #2f2f93;">
+                <img src="assets/tom.webp" alt="Projeto Tom Filho">
+                <div class="overlay">
+                    <h1>Tom Filho</h1>
+                    <h2>2024</h2>
+                </div>
+            </div>
+        </section>
         
+
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
@@ -66,7 +76,7 @@
                 el: document.querySelector("[data-scroll-container]"),
                 smooth: true,
                 smoothMobile: true,
-                inertia: 2.5,
+                inertia: 2.6,
             });
 
             // Adicionando a classe 'hidden' às imagens no carregamento

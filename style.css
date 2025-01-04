@@ -26,7 +26,7 @@ a:hover {
 header.topo {
     display: flex;
     justify-content: space-between;
-    margin-top: -1rem;
+    margin-top: 0rem;
 }
 
 header.topo h1 {
@@ -40,13 +40,13 @@ header.topo h1 {
 .info {
     display: flex;
     width: 100%;
-    margin-top: 0rem;
+    margin-top: 2rem;
     gap: 10rem;
     position: relative;
 }
 
 .info p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .info .highlight {
@@ -80,7 +80,6 @@ section.cover {
     gap: 0rem;
     width: 100%;
     margin-top: 2.5rem;
-    /* Espaçamento superior */
 }
 
 section.works {
@@ -98,7 +97,7 @@ section.cover img {
     object-fit: cover;
     border-radius: 0.5rem;
     animation: fadeInUp;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
 }
 
 section.works img {
@@ -117,12 +116,71 @@ section.works img.visible {
     transform: translateY(0);
 }
 
+.cover-item {
+    position: relative;
+    width: 49vw;
+    aspect-ratio: 5 / 3;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+}
+
+.cover-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cover-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2rem;
+    opacity: 0;
+    background: var(--fallback-color, rgba(255, 255, 255, 0.3));
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.cover-item:hover .overlay {
+    opacity: 1;
+}
+
+@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+    .cover-item .overlay {
+        backdrop-filter: blur(1rem);
+        -webkit-backdrop-filter: blur(1rem);
+        background: none;
+        border: 0.2rem solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+.cover-item .overlay h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.cover-item .overlay h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0.5rem 0 0;
+}
+
 .work-item {
     position: relative;
     width: 49vw;
     aspect-ratio: 5 / 3;
     overflow: hidden;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .work-item img {
@@ -142,40 +200,37 @@ section.works img.visible {
     left: 0;
     width: 100%;
     height: 100%;
-
-    /* Somente para Firefox */
-    background-color: rgba(173, 0, 0, 0.13); 
-
-    backdrop-filter: blur(1rem); /* Efeito de desfoque */
-    color: #fff; /* Texto em branco */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2rem;
     opacity: 0;
-    transition: opacity 0.3s ease;
-    cursor: pointer;
+    background: var(--fallback-color, rgba(255, 255, 255, 0.3));
+    color: #ffffff;
+    transition: all 0.5s ease;
 }
 
 .work-item:hover .overlay {
     opacity: 1;
 }
 
-
-.work-item .overlay p {
-    margin-top: 30%;
-    margin-left: 2rem;
-    font-size: 1.2rem;
+@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+    .work-item .overlay {
+        backdrop-filter: blur(1rem);
+        -webkit-backdrop-filter: blur(1rem);
+        background: none;
+        border: 0.2rem solid rgba(255, 255, 255, 0.2);
+    }
 }
 
 .work-item .overlay h1 {
-    margin-left: 2rem;
-    font-size: 4rem;
+    font-size: 2rem;
+    margin: 0;
 }
 
 .work-item .overlay h2 {
-    margin-left: 2rem;
-    margin-top: -3rem;
-    font-size: 2rem;
-    font-weight: 200;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0.5rem 0 0;
 }
-
-
