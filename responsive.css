@@ -1,7 +1,7 @@
 /* responsive.css */
 
 /* Estilo para dispositivos móveis */
-@media (max-width: 720px) {
+@media (max-width: 730px) {
     header.topo h1 {
         font-size: 4rem;
         align-items: center;
@@ -54,7 +54,6 @@
         text-align: right;
     }
 
-
     section.cover, section.works {
         flex-direction: column;
         align-items: center;
@@ -79,6 +78,29 @@
 
     .cover-item .overlay h2, .work-item .overlay h2 {
         font-size: 1rem;
+    }
+
+    .work-item .overlay h1 {
+        width: 32rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin: 0;
+    }
+    
+    .work-item .overlay h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 0.5rem 0 0;
+        color: #ffffffd8;
+    }
+    
+    .apocalipse h1 {
+        font-size: 2rem !important;
+    }
+    
+    .tom h1{
+        font-size: 2rem !important;
+           
     }
 }
 
