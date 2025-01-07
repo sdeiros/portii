@@ -5,7 +5,7 @@ body {
     overflow: hidden;
     flex-direction: column;
     padding: 0;
-    margin-top: 0;
+    margin-top: -1rem;
     margin-bottom: 0;
 }
 
@@ -40,7 +40,7 @@ header.topo h1 {
 .info {
     display: flex;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 0rem;
     gap: 10rem;
     position: relative;
 }
@@ -79,7 +79,7 @@ section.cover {
     justify-content: space-between;
     gap: 0rem;
     width: 100%;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
 }
 
 section.works {
@@ -147,7 +147,7 @@ section.works img.visible {
     opacity: 0;
     background: var(--fallback-color, rgba(255, 255, 255, 0.3));
     color: #ffffff;
-    transition: all 0.5s ease;
+    transition: all 0.8s ease;
 }
 
 .cover-item:hover .overlay {
@@ -164,14 +164,17 @@ section.works img.visible {
 }
 
 .cover-item .overlay h1 {
+    width: 32rem;
     font-size: 2.5rem;
+    font-weight: 500;
     margin: 0;
 }
 
 .cover-item .overlay h2 {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0.5rem 0 0;
+    color: #ffffffd8;
 }
 
 .work-item {
@@ -208,7 +211,7 @@ section.works img.visible {
     opacity: 0;
     background: var(--fallback-color, rgba(255, 255, 255, 0.3));
     color: #ffffff;
-    transition: all 0.5s ease;
+    transition: all 0.8s ease;
 }
 
 .work-item:hover .overlay {
@@ -217,20 +220,41 @@ section.works img.visible {
 
 @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
     .work-item .overlay {
-        backdrop-filter: blur(1rem);
-        -webkit-backdrop-filter: blur(1rem);
+        backdrop-filter: blur(1.5rem);
+        -webkit-backdrop-filter: blur(1.5rem);
         background: none;
         border: 0.2rem solid rgba(255, 255, 255, 0.2);
     }
 }
 
 .work-item .overlay h1 {
-    font-size: 2rem;
+    width: 32rem;
+    font-size: 2.5rem;
+    font-weight: 500;
     margin: 0;
 }
 
 .work-item .overlay h2 {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0.5rem 0 0;
+    color: #ffffffd8;
+}
+
+.apocalipse h1 {
+    font-family: "ITC Benguiat Std";
+    line-height: 4rem !important;
+    font-size: 5rem !important;
+    letter-spacing: 0.01rem; /* Espaçamento entre letras */
+    color: #ffffff;
+    text-shadow:
+        0 0 0.2rem #ffffff,
+        0 0 0.2rem #ffffff;
+}
+
+.tom h1{
+    color: #fc5800;
+    font-family: Zuume;
+    font-size: 6rem !important;
+       
 }

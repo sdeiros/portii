@@ -1,0 +1,84 @@
+/* responsive.css */
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 720px) {
+    header.topo h1 {
+        font-size: 8rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header.topo {
+        display: flex; /* Usa Flexbox para facilitar o alinhamento */
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+    }
+    
+    header.topo h1 {
+        margin: 0; /* Remove margens padrão do h1 */
+    }
+
+    header.topo h1 + h1 {
+        display: none; /* Remove o elemento 2025 */
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0rem;
+        margin: 2rem 1rem 0 0.5;
+        text-align: center;
+        align-items: center;
+    }
+
+    .info p {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .info p.me {
+        margin-right: 5rem;
+        text-align: left;
+    }
+
+    .info p.criacao {
+        text-align: right;
+    }
+
+    .info p.highlight {
+        text-align: left;
+    }
+
+    .info p.papo {
+        margin-top: 4rem;
+        text-align: right;
+    }
+
+
+    section.cover, section.works {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    section.cover img, section.works img {
+        width: 100%;
+    }
+
+    .cover-item, .work-item {
+        width: 98%;
+    }
+
+    .cover-item .overlay, .work-item .overlay {
+        padding: 1rem;
+    }
+
+    .cover-item .overlay h1, .work-item .overlay h1 {
+        font-size: 1.5rem;
+    }
+
+    .cover-item .overlay h2, .work-item .overlay h2 {
+        font-size: 1rem;
+    }
+}
+
