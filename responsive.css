@@ -3,7 +3,7 @@
 /* Estilo para dispositivos móveis */
 @media (max-width: 720px) {
     header.topo h1 {
-        font-size: 6rem;
+        font-size: 4rem;
         align-items: center;
         justify-content: center;
     }
