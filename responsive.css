@@ -502,24 +502,17 @@
     .cover-text {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* Divide a área em duas colunas iguais */
         gap: 1rem;
-        /* Adiciona um espaçamento entre as colunas */
         margin-top: -0.5rem;
-        /* Dá um pouco de espaçamento acima */
         padding: 0;
-        /* Remove o padding nas laterais */
         width: 100%;
-        /* Garante que ocupe 100% da largura disponível */
     }
 
     .cover-text h1,
     .cover-text h2 {
         margin: 0;
         font-size: 0.8rem;
-        /* Tamanho do texto ajustado para ser mais legível */
         font-weight: normal;
-        /* Para que ambos os títulos fiquem com peso normal */
     }
 
     .cover-text h1 {
@@ -538,6 +531,5 @@
         height: 0;
         margin: 20px 0;
     }
-
 
 }
