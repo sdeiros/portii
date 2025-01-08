@@ -40,13 +40,22 @@ header.topo h1 {
 .info {
     display: flex;
     width: 100%;
-    margin-top: 0rem;
-    gap: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    gap: 10rem; /* Remove o gap entre os elementos */
     position: relative;
+    justify-content: flex-start; /* Alinha os blocos ao início, para garantir que fiquem juntos */
+}
+
+.bloco {
+    display: flex;
+    flex-direction: column; /* Itens dentro de cada bloco ficam empilhados */
+    margin: 0; /* Remove margens extras que possam ter */
 }
 
 .info p {
     font-size: 1.4rem;
+    margin: 0; /* Remove margens adicionais dos parágrafos */
 }
 
 .info .highlight {
