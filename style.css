@@ -71,7 +71,6 @@ header.topo h1 {
 .papo {
     position: absolute;
     right: 0rem;
-    font-size: 1.2rem;
     text-align: right;
     text-decoration: underline;
     cursor: pointer;
@@ -119,7 +118,6 @@ section.works img {
     transition: opacity 1s ease, transform 1s ease;
 }
 
-
 section.works img.visible {
     opacity: 1;
     transform: translateY(0);
@@ -132,7 +130,6 @@ section.works img.visible {
     overflow: hidden;
     border-radius: 0.5rem;
     cursor: pointer;
-
 }
 
 .cover-item img {
@@ -266,4 +263,12 @@ section.works img.visible {
     font-family: Zuume;
     font-size: 6rem !important;
        
+}
+
+.cover-text{
+    display: none;
+}
+
+hr{
+    display: none;
 }

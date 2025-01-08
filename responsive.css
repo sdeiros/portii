@@ -1,6 +1,387 @@
-/* responsive.css */
+@media (max-width: 1920px) {
+    header.topo h1 {
+        font-size: 12rem;
+    }
 
-/* Estilo para dispositivos móveis */
+    .info p {
+        font-size: 2.4rem;
+    }
+
+    .info {
+        margin-top: 4rem;
+        margin-bottom: 0rem;
+    }
+
+    section.cover {
+        margin-top: 7rem;
+    }
+    
+    section.cover img {
+        border-radius: 1rem;
+    }
+
+    section.works img {
+        border-radius: 1rem;
+    }
+
+    .cover-item {
+        border-radius: 1rem;
+    }
+
+    .work-item {
+        border-radius: 1rem;
+    }
+}
+
+@media (max-width: 1600px) {
+    body {
+        font-family: "Inter", serif;
+        background-color: #f8f4eb;
+        color: #931f1f;
+        overflow: hidden;
+        flex-direction: column;
+        padding: 0;
+        margin-top: -1rem;
+        margin-bottom: 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    
+    [data-scroll-container] {
+        overflow: hidden;
+    }
+    
+    header.topo {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0rem;
+    }
+    
+    header.topo h1 {
+        font-size: 7.5rem;
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: -0.2rem;
+        margin: 0;
+    }
+    
+    .info {
+        display: flex;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        gap: 10rem; /* Remove o gap entre os elementos */
+        position: relative;
+        justify-content: flex-start; /* Alinha os blocos ao início, para garantir que fiquem juntos */
+    }
+    
+    .bloco {
+        display: flex;
+        flex-direction: column; /* Itens dentro de cada bloco ficam empilhados */
+        margin: 0; /* Remove margens extras que possam ter */
+    }
+    
+    .info p {
+        font-size: 1.4rem;
+        margin: 0; /* Remove margens adicionais dos parágrafos */
+    }
+    
+    .info .highlight {
+        text-decoration: underline;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .info .highlight:hover {
+        font-weight: 600;
+    }
+    
+    .papo {
+        position: absolute;
+        right: 0rem;
+        text-align: right;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .papo:hover {
+        font-weight: 600;
+    }
+    
+    section.cover {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0rem;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+    
+    section.works {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    section.cover img {
+        width: 49vw;
+        aspect-ratio: 5 / 3;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        animation: fadeInUp;
+        animation-duration: 0.8s;
+    }
+    
+    section.works img {
+        width: 49vw;
+        aspect-ratio: 5 / 3;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+    
+    section.works img.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .cover-item {
+        position: relative;
+        width: 49vw;
+        aspect-ratio: 5 / 3;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    
+    }
+    
+    .cover-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .cover-item .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 2rem;
+        opacity: 0;
+        background: var(--fallback-color, rgba(255, 255, 255, 0.3));
+        color: #ffffff;
+        transition: all 0.8s ease;
+    }
+    
+    .cover-item:hover .overlay {
+        opacity: 1;
+    }
+    
+    @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+        .cover-item .overlay {
+            backdrop-filter: blur(1rem);
+            -webkit-backdrop-filter: blur(1rem);
+            background: none;
+            border: 0.2rem solid rgba(255, 255, 255, 0.2);
+        }
+    }
+    
+    .cover-item .overlay h1 {
+        width: 32rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin: 0;
+    }
+    
+    .cover-item .overlay h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 0.5rem 0 0;
+        color: #ffffffd8;
+    }
+    
+    .work-item {
+        position: relative;
+        width: 49vw;
+        aspect-ratio: 5 / 3;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+    
+    .work-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .work-item:hover img {
+        transform: scale(1.1);
+    }
+    
+    .work-item .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 2rem;
+        opacity: 0;
+        background: var(--fallback-color, rgba(255, 255, 255, 0.3));
+        color: #ffffff;
+        transition: all 0.8s ease;
+    }
+    
+    .work-item:hover .overlay {
+        opacity: 1;
+    }
+    
+    @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+        .work-item .overlay {
+            backdrop-filter: blur(1.5rem);
+            -webkit-backdrop-filter: blur(1.5rem);
+            background: none;
+            border: 0.2rem solid rgba(255, 255, 255, 0.2);
+        }
+    }
+    
+    .work-item .overlay h1 {
+        width: 32rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin: 0;
+    }
+    
+    .work-item .overlay h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 0.5rem 0 0;
+        color: #ffffffd8;
+    }
+    
+    .apocalipse h1 {
+        font-family: "ITC Benguiat Std";
+        line-height: 4rem !important;
+        font-size: 5rem !important;
+        letter-spacing: 0.01rem; /* Espaçamento entre letras */
+        color: #ffffff;
+        text-shadow:
+            0 0 0.2rem #ffffff,
+            0 0 0.2rem #ffffff;
+    }
+    
+    .tom h1{
+        color: #fc5800;
+        font-family: Zuume;
+        font-size: 6rem !important;
+           
+    }
+    
+    .cover-text{
+        display: none;
+    }
+    
+    hr{
+        display: none;
+    }
+}
+
+@media (max-width: 1120px) {
+    header.topo h1 {
+        font-size: 7rem;
+    }
+
+    .info p {
+        font-size: 1.3rem;
+    }
+
+    .info {
+        gap: 4rem; 
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+    }
+
+    section.cover {
+        margin-top: 6rem;
+    }
+    
+    section.cover img {
+        border-radius: 0.5rem;
+    }
+
+    section.works img {
+        border-radius: 0.5rem;
+    }
+
+    .cover-item {
+        border-radius: 0.5rem;
+    }
+
+    .work-item {
+        border-radius: 0.5rem;
+    }
+
+    .work-item .overlay h1 {
+        width: 30rem;
+        font-size: 8rem;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .work-item .overlay h2 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: 0.5rem 0 0;
+        color: #ffffffd8;
+    }
+
+    .apocalipse h1 {
+        line-height: 3.5rem !important;
+        font-size: 4rem !important;
+        text-shadow:
+        0 0 0.1rem #ffffff,
+        0 0 0.1rem #ffffff;
+    }
+
+    .tom h1 {
+        font-size: 4rem !important;
+    }
+
+    .cover-item .overlay h1 {
+        width: 26rem;
+        font-size: 2rem;
+    }
+    
+    .cover-item .overlay h2 {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 730px) {
     header.topo h1 {
         font-size: 4rem;
@@ -28,15 +409,14 @@
     .info {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0rem;
-        margin: 2rem 4rem 0 0.5;
+        margin: auto;
+        gap: 0;
         text-align: center;
         align-items: center;
-        white-space: nowrap;
     }
 
     .info p {
-        font-size: 1.2rem;
+        font-size: 0.7rem;
         margin: 0;
     }
 
@@ -58,8 +438,11 @@
         text-align: right;
     }
 
-    .papo {
-        left: 1rem;	
+    .criacao {
+        margin: 0 auto;
+        white-space: nowrap; /* Evita a quebra de linha */
+
+        
     }
 
     section.cover,
@@ -67,6 +450,7 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        margin-top: 0.6rem;
     }
 
     section.cover img,
@@ -76,7 +460,7 @@
 
     .cover-item,
     .work-item {
-        width: 98%;
+        width: 100%;
     }
 
     .cover-item .overlay,
@@ -86,12 +470,13 @@
 
     .cover-item .overlay h1,
     .work-item .overlay h1 {
-        font-size: 1.5rem;
+        width: 60%;
+        font-size: 1.2rem;
     }
 
     .cover-item .overlay h2,
     .work-item .overlay h2 {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .work-item .overlay h1 {
@@ -109,11 +494,43 @@
     }
 
     .apocalipse h1 {
+        line-height: 1.8rem !important;
         font-size: 2rem !important;
+        text-shadow:
+        0 0 0.1rem #ffffff,
+        0 0 0.1rem #ffffff;
     }
 
     .tom h1 {
         font-size: 2rem !important;
+    }
+    
+    .cover-text {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Divide a área em duas colunas iguais */
+        gap: 1rem; /* Adiciona um espaçamento entre as colunas */
+        margin-top: -0.5rem; /* Dá um pouco de espaçamento acima */
+        padding: 0; /* Remove o padding nas laterais */
+        width: 100%; /* Garante que ocupe 100% da largura disponível */
+    }
+    
+    .cover-text h1,
+    .cover-text h2 {
+        margin: 0;
+        font-size: 0.8rem; /* Tamanho do texto ajustado para ser mais legível */
+        font-weight: normal; /* Para que ambos os títulos fiquem com peso normal */
+    }
+    
+    .cover-text h1 {
+        font-size: 0.8rem; /* Tamanho um pouco maior para o h1 */
+    }
+    
+    .cover-text h2 {
+        font-size: 0.8rem; /* Ajuste para o h2 */
+        text-align: right; /* Alinha o texto do h2 à direita */
+    }
 
+    hr{
+        border-color: #931f1f;
     }
 }
