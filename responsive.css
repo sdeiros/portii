@@ -54,7 +54,6 @@
         text-decoration: underline;
     }
     
-    
     [data-scroll-container] {
         overflow: hidden;
     }
@@ -195,15 +194,6 @@
     
     .cover-item:hover .overlay {
         opacity: 1;
-    }
-    
-    @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
-        .cover-item .overlay {
-            backdrop-filter: blur(1rem);
-            -webkit-backdrop-filter: blur(1rem);
-            background: none;
-            border: 0.2rem solid rgba(255, 255, 255, 0.2);
-        }
     }
     
     .cover-item .overlay h1 {
@@ -391,11 +381,8 @@
 
     header.topo {
         display: flex;
-        /* Usa Flexbox para facilitar o alinhamento */
         justify-content: center;
-        /* Centraliza horizontalmente */
         align-items: center;
-        /* Centraliza verticalmente */
     }
 
     header.topo h1 {
@@ -522,15 +509,16 @@
     }
     
     .cover-text h1 {
-        font-size: 0.8rem; /* Tamanho um pouco maior para o h1 */
+        font-size: 0.8rem; 
     }
     
     .cover-text h2 {
-        font-size: 0.8rem; /* Ajuste para o h2 */
-        text-align: right; /* Alinha o texto do h2 à direita */
+        font-size: 0.8rem; 
+        text-align: right; 
     }
 
     hr{
+        display: block;
         border-color: #931f1f;
     }
 }
