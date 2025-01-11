@@ -117,32 +117,35 @@
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            if (window.innerWidth > 730) { // Apenas ativa o Locomotive Scroll em telas maiores
+            if (window.innerWidth > 730) { // Apenas executa a lógica em telas maiores
                 const scroll = new LocomotiveScroll({
                     el: document.querySelector("[data-scroll-container]"),
                     smooth: true,
                     inertia: 2,
                 });
-            }
 
+                // Adiciona a lógica para exibir imagens ao rolar
+                const images = document.querySelectorAll("section.works img");
+                images.forEach(image => image.classList.add("hidden"));
 
-            // Adicionando a classe 'hidden' às imagens no carregamento
-            const images = document.querySelectorAll("section.works img");
-            images.forEach(image => image.classList.add("hidden"));
-
-            // Removendo a classe 'hidden' ao rolar
-            scroll.on("scroll", () => {
-                images.forEach(image => {
-                    if (image.classList.contains("visible") && image.classList.contains("outro") && image.getBoundingClientRect().top < window.innerHeight) {
-                        image.classList.remove("hidden");
-                        image.classList.add("visible-outro");
-                    } else if (image.getBoundingClientRect().top < window.innerHeight) {
-                        image.classList.remove("hidden");
-                        image.classList.add("visible");
-                    }
+                scroll.on("scroll", () => {
+                    images.forEach(image => {
+                        if (image.getBoundingClientRect().top < window.innerHeight) {
+                            image.classList.remove("hidden");
+                            image.classList.add("visible");
+                        }
+                    });
                 });
-            });
+            } else {
+                // Para telas menores, remove a classe 'hidden' diretamente
+                const images = document.querySelectorAll("section.works img");
+                images.forEach(image => {
+                    image.classList.remove("hidden");
+                    image.classList.add("visible");
+                });
+            }
         });
+
     </script>
 
 </body>

@@ -465,6 +465,12 @@
         width: 100%;
     }
 
+    section.works img {
+        opacity: 1;
+        transform: translateY(0); /* Garante que as imagens fiquem visíveis e posicionadas corretamente */
+        transition: none; /* Remove animações para evitar bugs em dispositivos móveis */
+    }
+
     .cover-item,
     .work-item {
         width: 100%;
