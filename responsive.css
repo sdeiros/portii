@@ -388,6 +388,10 @@
 }
 
 @media (max-width: 730px) {
+    [data-scroll-container] {
+        overflow: auto;
+    }
+
     header.topo h1 {
         font-size: 4rem;
         align-items: center;
